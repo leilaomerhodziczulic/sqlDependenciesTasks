@@ -10,3 +10,4 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 GET     /checkdb                    controllers.DatabaseTestController.checkDB()
 
+GET     /insert-student             controllers.StudentController.insertStudent()

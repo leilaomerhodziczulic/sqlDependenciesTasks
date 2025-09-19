@@ -1,17 +1,19 @@
 package models;
 
 import io.ebean.Model;
-import io.ebean.annotation.Identity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 public class Students extends Model {
     @Id
-    @Identity
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
     public String name;
     public String indexNumber;
+
+    public Students(String name, String indexNumber){
+        this.name = name;
+        this.indexNumber = indexNumber;
+    }
 }
